@@ -10,12 +10,14 @@ import Foundation
 class HotelsViewModel : ObservableObject {
     
     @Published var hotels = [HotelData]()
+    @Published var loading = false
     
     init() {
         fetchAllHotels()
     }
     
     func fetchAllHotels() {
+        self.loading = true
         if let url = URL(string: "https://hotels.tikapp.ml/hotels") {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let e = error {
@@ -27,6 +29,7 @@ class HotelsViewModel : ObservableObject {
                             let results = try decoder.decode([HotelData].self, from: safeData)
                             DispatchQueue.main.async {
                                 self.hotels = results
+                                self.loading = false
                             }
                         }
                         catch {

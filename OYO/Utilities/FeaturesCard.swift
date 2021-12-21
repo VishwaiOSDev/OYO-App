@@ -23,8 +23,8 @@ struct FeaturesCard: View {
                     .font(.subheadline)
                     .fontWeight(.light)
                     .padding(.top, 4.0)
-                
             }.foregroundColor(.primary)
+            
         }
         .frame(width: 100, height: 100, alignment: .center)
         .foregroundColor(.gray)
