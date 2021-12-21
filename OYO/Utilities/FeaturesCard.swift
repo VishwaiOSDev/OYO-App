@@ -15,7 +15,7 @@ struct FeaturesCard: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
-                .strokeBorder(lineWidth: 2)
+                .strokeBorder(lineWidth: 1.2)
             VStack{
                 Image(systemName: iconName)
                     .font(.title)
