@@ -10,11 +10,19 @@
 		881DDEF92770B9D500B24AD8 /* OYOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DDEF82770B9D500B24AD8 /* OYOApp.swift */; };
 		881DDEFD2770B9D700B24AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFC2770B9D700B24AD8 /* Assets.xcassets */; };
 		881DDF002770B9D700B24AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */; };
+		884435ED2773232F00AE188E /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884435EC2773232E00AE188E /* DemoView.swift */; };
+		8858B97C278AD7E9007F5020 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97B278AD7E8007F5020 /* UserSettings.swift */; };
+		8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97D278AE0D5007F5020 /* OwnersView.swift */; };
 		8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A12770F6A000BC45A4 /* HotelsListView.swift */; };
 		8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A42770F7CA00BC45A4 /* HotelData.swift */; };
 		8861C2A82770F81200BC45A4 /* HotelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */; };
+		8892039327880ED60084EEE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892039227880ED60084EEE7 /* ContentView.swift */; };
+		88920395278849130084EEE7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920394278849120084EEE7 /* LoginView.swift */; };
+		88920398278853B80084EEE7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920397278853B80084EEE7 /* SignupView.swift */; };
+		8892039A2788674B0084EEE7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889203992788674B0084EEE7 /* Storage.swift */; };
 		8898CA3C2771A7BA00EA2374 /* HotelDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8898CA3B2771A7BA00EA2374 /* HotelDetailsView.swift */; };
 		8898CA3F2771C13500EA2374 /* FeaturesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8898CA3E2771C13500EA2374 /* FeaturesCard.swift */; };
+		88BED035278B16420004668B /* Credientials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BED034278B16420004668B /* Credientials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +30,20 @@
 		881DDEF82770B9D500B24AD8 /* OYOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYOApp.swift; sourceTree = "<group>"; };
 		881DDEFC2770B9D700B24AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		884435E92772FB6600AE188E /* OYO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OYO.entitlements; sourceTree = "<group>"; };
+		884435EC2773232E00AE188E /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		8858B97B278AD7E8007F5020 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		8858B97D278AE0D5007F5020 /* OwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersView.swift; sourceTree = "<group>"; };
 		8861C2A12770F6A000BC45A4 /* HotelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsListView.swift; sourceTree = "<group>"; };
 		8861C2A42770F7CA00BC45A4 /* HotelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelData.swift; sourceTree = "<group>"; };
 		8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsViewModel.swift; sourceTree = "<group>"; };
+		8892039227880ED60084EEE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88920394278849120084EEE7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		88920397278853B80084EEE7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		889203992788674B0084EEE7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		8898CA3B2771A7BA00EA2374 /* HotelDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsView.swift; sourceTree = "<group>"; };
 		8898CA3E2771C13500EA2374 /* FeaturesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesCard.swift; sourceTree = "<group>"; };
+		88BED034278B16420004668B /* Credientials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credientials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +76,13 @@
 		881DDEF72770B9D400B24AD8 /* OYO */ = {
 			isa = PBXGroup;
 			children = (
+				884435E92772FB6600AE188E /* OYO.entitlements */,
 				881DDEF82770B9D500B24AD8 /* OYOApp.swift */,
 				8861C2A32770F7B700BC45A4 /* Model */,
 				8861C2A92770FA5F00BC45A4 /* View */,
 				8861C2A62770F7FB00BC45A4 /* ViewModel */,
-				8898CA3D2771C0E800EA2374 /* Utilities */,
+				8898CA3D2771C0E800EA2374 /* Components */,
+				8870A2412788A2700098F278 /* Utils */,
 				881DDEFC2770B9D700B24AD8 /* Assets.xcassets */,
 				881DDEFE2770B9D700B24AD8 /* Preview Content */,
 			);
@@ -82,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				8861C2A42770F7CA00BC45A4 /* HotelData.swift */,
+				88BED034278B16420004668B /* Credientials.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */,
+				8858B97B278AD7E8007F5020 /* UserSettings.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -97,18 +118,39 @@
 		8861C2A92770FA5F00BC45A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				889203962788539A0084EEE7 /* Authentication */,
 				8861C2A12770F6A000BC45A4 /* HotelsListView.swift */,
 				8898CA3B2771A7BA00EA2374 /* HotelDetailsView.swift */,
+				884435EC2773232E00AE188E /* DemoView.swift */,
+				8892039227880ED60084EEE7 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		8898CA3D2771C0E800EA2374 /* Utilities */ = {
+		8870A2412788A2700098F278 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				889203992788674B0084EEE7 /* Storage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		889203962788539A0084EEE7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				88920394278849120084EEE7 /* LoginView.swift */,
+				88920397278853B80084EEE7 /* SignupView.swift */,
+				8858B97D278AE0D5007F5020 /* OwnersView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8898CA3D2771C0E800EA2374 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				8898CA3E2771C13500EA2374 /* FeaturesCard.swift */,
 			);
-			path = Utilities;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,11 +224,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8898CA3F2771C13500EA2374 /* FeaturesCard.swift in Sources */,
+				8858B97C278AD7E9007F5020 /* UserSettings.swift in Sources */,
+				8892039A2788674B0084EEE7 /* Storage.swift in Sources */,
 				8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */,
+				8892039327880ED60084EEE7 /* ContentView.swift in Sources */,
+				88920395278849130084EEE7 /* LoginView.swift in Sources */,
+				88BED035278B16420004668B /* Credientials.swift in Sources */,
+				8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */,
+				88920398278853B80084EEE7 /* SignupView.swift in Sources */,
 				881DDEF92770B9D500B24AD8 /* OYOApp.swift in Sources */,
 				8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */,
 				8898CA3C2771A7BA00EA2374 /* HotelDetailsView.swift in Sources */,
 				8861C2A82770F81200BC45A4 /* HotelsViewModel.swift in Sources */,
+				884435ED2773232F00AE188E /* DemoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OYO/OYO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OYO/Preview Content\"";
@@ -325,6 +376,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +384,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vishwa.OYO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OYO/OYO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OYO/Preview Content\"";
@@ -354,6 +408,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +416,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vishwa.OYO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

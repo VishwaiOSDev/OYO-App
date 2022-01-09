@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HotelDetailsView: View {
     
+    @AppStorage("username") var username : String = "Vishwa"
+
     let image : String
     let hotelName : String
     let description : String
@@ -36,6 +38,7 @@ struct HotelDetailsView: View {
                     .foregroundColor(.gray)
                     .background(Color.white)
                     .cornerRadius(12)
+                    Text(username)
                     HStack{
                         VStack(alignment : .leading) {
                             //                                Text(hotelName)
@@ -84,6 +87,7 @@ struct HotelDetailsView: View {
                 HStack(alignment : .center) {
                     Button(){
                         // Book Hotel Button
+                        username = "Swift"
                     } label: {
                         Text("Book Now")
                             .fontWeight(.medium)

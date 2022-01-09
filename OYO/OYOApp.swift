@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct OYOApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            HotelsListView()
+           ContentView()
+                .environmentObject(UserSettings())
         }
     }
 }
+

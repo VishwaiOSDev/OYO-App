@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HotelsListView: View {
     
-    @StateObject var viewModel = HotelsViewModel()
+    @StateObject var viewModel : HotelsViewModel = HotelsViewModel()
+    @EnvironmentObject var settings : UserSettings
     
     var body: some View {
         NavigationView {
@@ -58,6 +59,15 @@ struct HotelsListView: View {
                     }
                 }
                 .navigationBarTitle("Hotels")
+                .toolbar {
+                    ToolbarItem {
+                        Button("Log out") {
+                            DispatchQueue.main.async {
+                               settings.isLoggedIn = false
+                            }
+                        }
+                    }
+                }
             } else {
                 ProgressView("Please wait...")
             }
@@ -65,9 +75,10 @@ struct HotelsListView: View {
     }
 }
 
+
+
 struct HotelsListView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelsListView()
         HotelsListView()
             .preferredColorScheme(.dark)
     }
