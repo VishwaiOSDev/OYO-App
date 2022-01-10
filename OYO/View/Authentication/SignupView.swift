@@ -60,9 +60,8 @@ struct SignupView: View {
     
     var footer : some View {
         
-        NavigationLink(destination: HotelsListView().navigationBarHidden(true)) {
-            PrimaryButton(action: storeUserDefault, label: "Sign Up")
-        }
+        PrimaryButton(action: storeUserDefault, label: "Sign Up")
+        
     }
     
     func storeUserDefault() {
@@ -82,7 +81,5 @@ struct SignupView: View {
 struct Signup_Previews: PreviewProvider {
     static var previews: some View {
         SignupView()
-            .preferredColorScheme(.dark)
-        
     }
 }

@@ -51,7 +51,7 @@ struct LoginView: View {
                     Text("Register")
                         .fontWeight(.semibold)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(.primary)
                 
             }
             .padding()

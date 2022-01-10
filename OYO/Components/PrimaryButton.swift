@@ -18,11 +18,11 @@ struct PrimaryButton : View {
             Text(label)
                 .font(.title3)
                 .bold()
-                .foregroundColor(.black)
+                .foregroundColor(Color("B&W"))
                 .frame(maxWidth : .infinity, maxHeight: 50)
         }
         .padding(8)
-        .background(.white)
+        .background(.primary)
         .cornerRadius(20)
 
     }
