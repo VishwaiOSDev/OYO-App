@@ -12,66 +12,52 @@ struct LoginView: View {
     @State private var email : String = ""
     @State private var password : String = ""
     
-    
     @EnvironmentObject var settings : UserSettings
     
     var body: some View {
+        
         NavigationView {
             VStack(alignment : .leading) {
+                
                 header
                 
                 Spacer()
                 
-                TextField("Phone, email or username", text: $email)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).fill(    Color(red: 0.113, green: 0.108, blue: 0.139)))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(Color(red: 0.201, green: 0.196, blue: 0.233))
-                    }
-                    .foregroundColor(.primary)
-                    .padding(.vertical, 4)
+                CustomTextField(text: $email, placeholder: "Phone, email or username")
                 
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).fill(    Color(red: 0.113, green: 0.108, blue: 0.139)))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(Color(red: 0.201, green: 0.196, blue: 0.233))
-                    }
-                    .foregroundColor(.primary)
-                    .padding(.vertical, 4)
-                
+                CustomSecureField(text: $password)
                 
                 Spacer()
                 
-                VStack {
-                    
-                    HStack {
-                        
-                        Text("Don't have an account?")
-                            .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 1.0, saturation: 0.0, brightness: 0.66)/*@END_MENU_TOKEN@*/)
-                        
-                        NavigationLink(destination: SignupView()) {
-                            Text("Register")
-                                .fontWeight(.semibold)
-                        }
-                        .foregroundColor(.white)
-                        
-                    }
-                    .padding()
-                    
-                    PrimaryButton(action: loginPressed, label: "Login")
-                    
-                }
-                
+                footer
                 
             }
             .padding()
+            .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(StackNavigationViewStyle())
- 
+            
+        }
+    }
+    
+    var footer : some View {
+        VStack {
+            
+            HStack {
+                
+                Text("Don't have an account?")
+                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.66))
+                
+                NavigationLink(destination: SignupView()) {
+                    Text("Register")
+                        .fontWeight(.semibold)
+                }
+                .foregroundColor(.white)
+                
+            }
+            .padding()
+            
+            PrimaryButton(action: loginPressed, label: "Login")
+            
         }
     }
     
@@ -97,7 +83,6 @@ struct LoginView: View {
         }
     }
     
-    
 }
 
 struct LoginView_Previews: PreviewProvider {
@@ -108,22 +93,3 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-
-struct PrimaryButton: View {
-    
-    var action : () -> ()
-    var label : String
-    
-    var body: some View {
-        Button(action : action) {
-            Text(label)
-                .font(.title3)
-                .bold()
-                .foregroundColor(.black)
-                .frame(maxWidth : .infinity, maxHeight: 50)
-        }
-        .padding(8)
-        .background(.white)
-        .cornerRadius(20)
-    }
-}

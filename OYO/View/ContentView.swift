@@ -9,17 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var setting : UserSettings
+    @EnvironmentObject var settings : UserSettings
     
     var body: some View {
-            
+        
         if Storage.isLoggedIn {
-            HotelsListView()
+            if Storage.isOwner {
+                OwnersView()
+            } else {
+                HotelsListView()
+            }
         } else {
             LoginView()
         }
         
     }
+}
+
+
+struct OwnerView : View {
+    
+    @EnvironmentObject var settings : UserSettings
+    
+    var body : some View {
+        VStack{
+            Text("Owner")
+                .font(.largeTitle)
+            Button("Log out") {
+                settings.isLoggedIn = false
+            }
+        }
+    }
+    
 }
 
 

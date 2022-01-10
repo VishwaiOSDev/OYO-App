@@ -22,6 +22,9 @@
 		8892039A2788674B0084EEE7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889203992788674B0084EEE7 /* Storage.swift */; };
 		8898CA3C2771A7BA00EA2374 /* HotelDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8898CA3B2771A7BA00EA2374 /* HotelDetailsView.swift */; };
 		8898CA3F2771C13500EA2374 /* FeaturesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8898CA3E2771C13500EA2374 /* FeaturesCard.swift */; };
+		88A4F5F9278BF167007BDFC2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5F8278BF166007BDFC2 /* CustomTextField.swift */; };
+		88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */; };
+		88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */; };
 		88BED035278B16420004668B /* Credientials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BED034278B16420004668B /* Credientials.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		889203992788674B0084EEE7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		8898CA3B2771A7BA00EA2374 /* HotelDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsView.swift; sourceTree = "<group>"; };
 		8898CA3E2771C13500EA2374 /* FeaturesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesCard.swift; sourceTree = "<group>"; };
+		88A4F5F8278BF166007BDFC2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		88BED034278B16420004668B /* Credientials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credientials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				8898CA3E2771C13500EA2374 /* FeaturesCard.swift */,
+				88A4F5F8278BF166007BDFC2 /* CustomTextField.swift */,
+				88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */,
+				88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,13 +239,16 @@
 				8892039327880ED60084EEE7 /* ContentView.swift in Sources */,
 				88920395278849130084EEE7 /* LoginView.swift in Sources */,
 				88BED035278B16420004668B /* Credientials.swift in Sources */,
+				88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */,
 				8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */,
+				88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */,
 				88920398278853B80084EEE7 /* SignupView.swift in Sources */,
 				881DDEF92770B9D500B24AD8 /* OYOApp.swift in Sources */,
 				8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */,
 				8898CA3C2771A7BA00EA2374 /* HotelDetailsView.swift in Sources */,
 				8861C2A82770F81200BC45A4 /* HotelsViewModel.swift in Sources */,
 				884435ED2773232F00AE188E /* DemoView.swift in Sources */,
+				88A4F5F9278BF167007BDFC2 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
