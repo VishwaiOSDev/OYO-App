@@ -77,7 +77,7 @@ struct LoginView: View {
     }
     
     func loginPressed() {
-        let validation = settings.loginValidation(credientials: Credientials(email: email, password: password))
+        let validation = settings.loginValidation(for: Credientials(email: email, password: password))
         if validation {
             settings.isLoggedIn = true
         }

@@ -67,10 +67,12 @@ struct SignupView: View {
     
     func storeUserDefault() {
         
+        Storage.encodeData(for: "users", email, password)
+        
         DispatchQueue.main.async {
-            Storage.emailStorage = email
-            Storage.passwordStorage = password
+            
             settings.isLoggedIn = true
+            
         }
         
     }

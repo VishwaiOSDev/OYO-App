@@ -13,7 +13,7 @@ class UserSettings : ObservableObject {
     
     @Published var isLoggedIn : Bool {
         didSet {
-                Storage.isLoggedIn = isLoggedIn
+            Storage.isLoggedIn = isLoggedIn
         }
     }
     
@@ -21,14 +21,19 @@ class UserSettings : ObservableObject {
         self.isLoggedIn = false
     }
     
-    func loginValidation(credientials : Credientials) -> Bool {
+    func loginValidation(for cred : Credientials) -> Bool {
         
-        if credientials.password == "123" && credientials.email.contains("@") {
-            return true
+        if let storedData = Storage.decodeData(for: "users") {
+            
+            if let storedPassword = storedData[cred.email] {
+                if storedPassword == cred.password {
+                    return true
+                }
+            } else {
+                return false
+            }
         }
-        
         return false
-        
     }
     
 }
