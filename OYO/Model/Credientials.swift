@@ -9,7 +9,10 @@ import Foundation
 
 
 struct Credientials {
+    
+    var name : String = ""
+    var phone : String = ""
     var email : String = ""
     var password : String = ""
-    var isOwner : Bool = false
+   
 }

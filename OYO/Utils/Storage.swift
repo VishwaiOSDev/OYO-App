@@ -20,7 +20,7 @@ struct Storage {
         var credientials = [email : password]
         
         if let storedData = decodeData(for: key) {
-                        
+            
             credientials.merge(storedData) {(current , _) in current}
             
             do {
@@ -31,9 +31,9 @@ struct Storage {
             }
             
             UserDefaults.standard.set(data, forKey: key)
-        
+            
         } else {
-                
+            
             do {
                 data = try encoder.encode(credientials)
                 
@@ -51,7 +51,7 @@ struct Storage {
     static func decodeData(for key : String) -> [String : String]? {
         
         let decorder = JSONDecoder()
-                
+        
         do {
             if let storedData = UserDefaults.standard.data(forKey: key) {
                 let data = try decorder.decode([String : String].self, from: storedData)
