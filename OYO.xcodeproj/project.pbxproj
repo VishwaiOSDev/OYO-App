@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		881DDEF52770B9D400B24AD8 /* OYO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OYO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		881DDEF52770B9D400B24AD8 /* Bookz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881DDEF82770B9D500B24AD8 /* OYOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYOApp.swift; sourceTree = "<group>"; };
 		881DDEFC2770B9D700B24AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		881DDEF62770B9D400B24AD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				881DDEF52770B9D400B24AD8 /* OYO.app */,
+				881DDEF52770B9D400B24AD8 /* Bookz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			);
 			name = OYO;
 			productName = OYO;
-			productReference = 881DDEF52770B9D400B24AD8 /* OYO.app */;
+			productReference = 881DDEF52770B9D400B24AD8 /* Bookz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +395,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vishwa.OYO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bookz;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -427,7 +427,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vishwa.OYO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bookz;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

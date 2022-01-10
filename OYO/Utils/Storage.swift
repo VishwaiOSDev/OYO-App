@@ -20,7 +20,7 @@ struct Storage {
         var credientials = [email : password]
         
         if let storedData = decodeData(for: key) {
-            
+                        
             credientials.merge(storedData) {(current , _) in current}
             
             do {
@@ -30,11 +30,19 @@ struct Storage {
                 print(error.localizedDescription)
             }
             
-            DispatchQueue.main.async {
+            UserDefaults.standard.set(data, forKey: key)
+        
+        } else {
                 
-                UserDefaults.standard.set(data, forKey: key)
+            do {
+                data = try encoder.encode(credientials)
                 
             }
+            catch {
+                print(error.localizedDescription)
+            }
+            
+            UserDefaults.standard.set(data, forKey: key)
             
         }
         
@@ -43,10 +51,11 @@ struct Storage {
     static func decodeData(for key : String) -> [String : String]? {
         
         let decorder = JSONDecoder()
-        
+                
         do {
             if let storedData = UserDefaults.standard.data(forKey: key) {
                 let data = try decorder.decode([String : String].self, from: storedData)
+                print(data)
                 return data
             }
         }

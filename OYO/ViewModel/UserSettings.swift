@@ -24,7 +24,7 @@ class UserSettings : ObservableObject {
     func loginValidation(for cred : Credientials) -> Bool {
         
         if let storedData = Storage.decodeData(for: "users") {
-            
+            print(storedData)
             if let storedPassword = storedData[cred.email] {
                 if storedPassword == cred.password {
                     return true
