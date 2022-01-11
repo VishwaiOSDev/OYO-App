@@ -14,11 +14,7 @@ struct ContentView: View {
     var body: some View {
         
         if Storage.isLoggedIn {
-            if Storage.isOwner {
-                OwnersView()
-            } else {
-                HotelsListView()
-            }
+            HotelsListView()
         } else {
             LoginView()
         }

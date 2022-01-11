@@ -17,22 +17,73 @@ class UserSettings : ObservableObject {
         }
     }
     
+    private var credArray = [Credientials]()
+    
     init() {
         self.isLoggedIn = false
     }
     
-    func loginValidation(for cred : Credientials) -> Bool {
+    func performSignUp(for cred : Credientials) {
         
-        if let storedData = Storage.decodeData(for: "users") {
-            if let storedPassword = storedData[cred.email] {
-                if storedPassword == cred.password {
-                    return true
-                }
-            } else {
-                return false
+        var data : Data?
+        
+        let encoder = JSONEncoder()
+        
+        if let oldData = decodeFromUserDefaults() {
+            credArray = oldData
+        }
+        
+        credArray.append(cred)
+        
+        do {
+            data = try encoder.encode(credArray)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        UserDefaults.standard.set(data, forKey: "users")
+        
+        DispatchQueue.main.async {
+            self.isLoggedIn = true
+        }
+        
+    }
+    
+    func decodeFromUserDefaults() -> [Credientials]? {
+                
+        let decoder = JSONDecoder()
+        
+        do {
+            if let storedData = UserDefaults.standard.data(forKey: "users") {
+                let safeData = try decoder.decode([Credientials].self, from: storedData)
+                return safeData
             }
         }
-        return false
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        return nil
+        
+    }
+
+    func performLogin(for cred : Credientials) {
+        
+        if let userDefaults = decodeFromUserDefaults() {
+            
+            for data in userDefaults {
+                if data == cred {
+                    DispatchQueue.main.async {
+                        self.isLoggedIn = true
+                    }
+                }
+            }
+            
+        } else {
+            print("You are not a valid user.")
+        }
+        
     }
     
 }

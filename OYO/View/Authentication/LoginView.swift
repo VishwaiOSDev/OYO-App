@@ -77,10 +77,14 @@ struct LoginView: View {
     }
     
     func loginPressed() {
-        let validation = settings.loginValidation(for: Credientials(email: email, password: password))
-        if validation {
-            settings.isLoggedIn = true
-        }
+        
+        settings.performLogin(for: Credientials(email : email, password: password))
+        
+        
+//        let validation = settings.loginValidation(for: Credientials(email: email, password: password))
+//        if validation {
+//            settings.isLoggedIn = true
+//        }
     }
     
 }

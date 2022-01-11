@@ -11,6 +11,8 @@ struct SignupView: View {
     
     @State private var email : String = ""
     @State private var password : String = ""
+    @State private var name : String = ""
+    @State private var phone : String = ""
     
     @EnvironmentObject var settings : UserSettings
     
@@ -21,12 +23,18 @@ struct SignupView: View {
             
             Spacer()
             
-            CustomTextField(text: $email, placeholder: "Phone or email")
+            CustomTextField(text: $email, placeholder: "Email")
                 .keyboardType(.emailAddress)
+            
+            CustomTextField(text: $name, placeholder: "Name")
+                .disableAutocorrection(true)
+            
+            CustomTextField(text: $phone, placeholder: "Phone")
+                .keyboardType(.numberPad)
             
             CustomSecureField(text: $password)
             
-            toggle
+//            toggle
             
             Spacer()
             
@@ -35,16 +43,17 @@ struct SignupView: View {
         }
         .padding()
         .disableAutocorrection(true)
+        .navigationTitle("Bookz")
         
     }
     
-    var toggle : some View {
-        Toggle(isOn: Storage.$isOwner) {
-            Text("Are you owner of a hotel?")
-        }
-        .padding(.vertical)
-        .toggleStyle(.switch)
-    }
+//    var toggle : some View {
+//        Toggle(isOn: Storage.$isOwner) {
+//            Text("Are you owner of a hotel?")
+//        }
+//        .padding(.vertical)
+//        .toggleStyle(.switch)
+//    }
     
     var header : some View {
         VStack(alignment : .leading) {
@@ -52,28 +61,19 @@ struct SignupView: View {
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .padding(.vertical, 2)
-            Text("Welcome to Bookz. \nWe missed you.")
-                .font(.title)
-                .fontWeight(.regular)
+          
         }
     }
     
     var footer : some View {
         
         PrimaryButton(action: storeUserDefault, label: "Sign Up")
-        
+    
     }
     
     func storeUserDefault() {
-        
-        Storage.encodeData(for: "users", email, password)
-        
-        DispatchQueue.main.async {
-            
-            settings.isLoggedIn = true
-            
-        }
-        
+        let credientails = Credientials(name: name, phone: phone, email: email, password: password)
+        settings.performSignUp(for: credientails)
     }
 }
 
