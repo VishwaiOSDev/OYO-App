@@ -33,10 +33,6 @@ struct ProfileView: View {
     }
     
     
-    
-    
-    
-    
     var header : some View {
         Text("Profile")
             .font(.largeTitle)

@@ -28,12 +28,8 @@ class UserSettings : ObservableObject {
     
     func performSignUp(for cred : Credientials) {
         
-        var data : Data?
-        
-        let encoder = JSONEncoder()
-        
         if let oldData = decodeFromUserDefaults() {
-            
+                        
             let emailExists = checkAccountExists(for: oldData, with: cred)
             
             if emailExists {
@@ -43,24 +39,32 @@ class UserSettings : ObservableObject {
                         
             credArray = oldData
             
-            credArray.append(cred)
-            
-            do {
-                data = try encoder.encode(credArray)
-            }
-            catch {
-                print(error.localizedDescription)
-            }
-            
-            UserDefaults.standard.set(data, forKey: "users")
-            Storage.loggedEmail = cred.email
-            
-            DispatchQueue.main.async {
-                self.isLoggedIn = true
-            }
-            
         }
         
+        credArray.append(cred)
+        storeDataOnStorage(for: cred.email)
+        
+    }
+    
+    func storeDataOnStorage(for email : String) {
+        
+        var data : Data?
+        
+        let encoder = JSONEncoder()
+        
+        do {
+            data = try encoder.encode(credArray)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        UserDefaults.standard.set(data, forKey: "users")
+        Storage.loggedEmail = email
+        
+        DispatchQueue.main.async {
+            self.isLoggedIn = true
+        }
     }
     
     
