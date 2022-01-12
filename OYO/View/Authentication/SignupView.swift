@@ -72,7 +72,7 @@ struct SignupView: View {
     }
     
     func storeUserDefault() {
-        let credientails = Credientials(name: name, phone: phone, email: email, password: password)
+        var credientails = Credientials(name: name, phone: phone, email: email, password: password)
         settings.performSignUp(for: credientails)
     }
 }

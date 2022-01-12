@@ -13,8 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         
-        if Storage.isLoggedIn {
-            HotelsListView()
+        if Storage.loggedIn {
+            RootView()
         } else {
             LoginView()
         }
@@ -38,7 +38,6 @@ struct OwnerView : View {
     }
     
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
