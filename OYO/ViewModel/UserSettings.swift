@@ -16,6 +16,8 @@ class UserSettings : ObservableObject {
         }
     }
     
+    @Published var userDetails : Credientials = Credientials()
+    
     private(set) var credArray = [Credientials]()
     
     init() {
@@ -115,4 +117,14 @@ class UserSettings : ObservableObject {
         
     }
     
+    func decodeUser(of user : String) {
+        
+        if let storedData = decodeFromUserDefaults() {
+            for data in storedData {
+                if data.email == user {
+                    userDetails = data
+                }
+            }
+        }
+    }
 }

@@ -15,72 +15,97 @@ struct ProfileView: View {
         
         VStack(alignment: .leading) {
             
-            Text("Profile")
-                .font(.largeTitle)
-                .bold()
+            header
             
-            ZStack {
-
-                VStack {
-                    
-                    Text("V")
-                        .font(.largeTitle)
-                        .padding(25)
-                        .background(.gray)
-                        .clipShape(Circle())
-                
-                    HStack {
-                        Text("Vishwa")
-                            .font(.largeTitle)
-                        Image(systemName: "checkmark.seal.fill")
-                            .foregroundColor(.green)
-                            .font(.title3)
-                    }
-                    
-                    Text("vishwa300499@gmail.com")
-                        .tint(.gray)
-                    
-                }
-                .frame(maxWidth : .infinity)
-                .padding()
-                .background(Color("FieldBackground"))
-                .cornerRadius(12)
-                
-            }
+            mainCard
             
-            HStack(spacing : 4) {
-                
-                VStack(alignment : .center) {
-                    Text("Phone")
-                        .font(.caption)
-                    
-                    Text("+91 95661 70360")
-                }
-                
-                
-            }
-            .frame(maxWidth : .infinity)
-            .padding()
-            .background(Color("FieldBackground"))
-            .cornerRadius(12)
+            phoneCard
             
             Spacer()
             
-            Button {
+            SignOutButton(action: signOutPressed, label: "Sign Out")
+            
+        }
+        .padding()
+        .onAppear {
+            setting.decodeUser(of: Storage.loggedEmail)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    var header : some View {
+        Text("Profile")
+            .font(.largeTitle)
+            .bold()
+    }
+    
+    var mainCard : some View {
+        ZStack {
+            cardDetails
+        }
+    }
+    
+    var cardDetails : some View {
+        VStack {
+            
+            circleAvatar
+            
+            nameIcon
+            
+            Text(setting.userDetails.email)
+                .tint(.gray)
+            
+        }
+        .frame(maxWidth : .infinity)
+        .padding()
+        .background(Color("FieldBackground"))
+        .cornerRadius(12)
+    }
+    
+    var circleAvatar : some View {
+        Text(setting.userDetails.name.prefix(1))
+            .font(.largeTitle)
+            .padding(25)
+            .background(.gray)
+            .clipShape(Circle())
+    }
+    
+    var nameIcon : some View {
+        HStack {
+            Text(setting.userDetails.name)
+                .font(.largeTitle)
+            Image(systemName: "checkmark.seal.fill")
+                .foregroundColor(.green)
+                .font(.title3)
+        }
+    }
+    
+    var phoneCard : some View {
+        HStack(spacing : 4) {
+            VStack(alignment : .center) {
+                Text("Phone")
+                    .font(.caption)
                 
-            } label: {
-                
-                Text("Sign Out")
-                    .frame(maxWidth : .infinity)
-                    .foregroundColor(.red)
-                    .padding()
-                    .background(Color("FieldBackground"))
-                    .cornerRadius(12)
+                Text(setting.userDetails.phone)
             }
-
-            
-            
-        }.padding()
+        }
+        .frame(maxWidth : .infinity)
+        .padding()
+        .background(Color("FieldBackground"))
+        .cornerRadius(12)
+    }
+    
+    //MARK: - Sign Out Logic is done here
+    
+    func signOutPressed() {
+        Storage.loggedEmail = ""
+        DispatchQueue.main.async {
+            setting.isLoggedIn = false
+        }
     }
 }
 
