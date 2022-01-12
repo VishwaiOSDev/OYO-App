@@ -14,14 +14,12 @@ struct RootView: View {
             
             HotelsListView()
                 .tabItem {
-                    Image(systemName: "square.split.1x2")
-                    Text("Hotels")
+                    Label("Hotels", systemImage: "square.split.1x2")
                 }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person.circle")
-                    Text("Profile")
+                    Label("Profile", systemImage: "person.circle")
                 }
             
         }

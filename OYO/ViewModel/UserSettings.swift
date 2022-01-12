@@ -38,7 +38,7 @@ class UserSettings : ObservableObject {
                 print("This Email ID already Exists.")
                 return
             }
-            
+                        
             credArray = oldData
             
             credArray.append(cred)

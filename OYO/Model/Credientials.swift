@@ -13,7 +13,6 @@ struct Credientials : Codable, Equatable {
     var phone : String = ""
     var email : String = ""
     var password : String = ""
-//    var logStatus : Bool = false
     
     static func == (lhs: Credientials, rhs: Credientials) -> Bool {
         if lhs.email == rhs.email {

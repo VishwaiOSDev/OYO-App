@@ -59,15 +59,6 @@ struct HotelsListView: View {
                     }
                 }
                 .navigationBarTitle("Hotels")
-                .toolbar {
-                    ToolbarItem {
-                        Button("Log out") {
-                            DispatchQueue.main.async {
-                               settings.isLoggedIn = false
-                            }
-                        }
-                    }
-                }
             } else {
                 ProgressView("Please wait...")
             }
