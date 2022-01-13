@@ -8,10 +8,8 @@
 import Foundation
 
 protocol AuthenticationService {
-    
     mutating func performSignUp(for user : Authentication.User) -> Bool
     func performLogout() -> Bool
-
 }
 
 struct Authentication : AuthenticationService {
@@ -26,7 +24,6 @@ struct Authentication : AuthenticationService {
     }
     
     mutating func performSignUp(for user : User) -> Bool {
-                
         @DecodeUserDefaults var oldData : [Authentication.User]
         let emailExists = checkAccountExists(for: oldData, with: user)
         if emailExists {
@@ -36,9 +33,7 @@ struct Authentication : AuthenticationService {
         users = oldData
         users.append(user)
         storeDataOnStorage(for: user.email)
-        
         return true
-        
     }
     
     func performLogout() -> Bool {
@@ -47,21 +42,16 @@ struct Authentication : AuthenticationService {
     }
     
     func storeDataOnStorage(for email : String) {
-        
         var data : Data?
-        
         let encoder = JSONEncoder()
-        
         do {
             data = try encoder.encode(users)
         }
         catch {
             print(error.localizedDescription)
         }
-        
         UserDefaults.standard.set(data, forKey: "users")
         Storage.loggedEmail = email
-        
     }
     
     func checkAccountExists(for details : [User], with cred : User) -> Bool {
@@ -72,17 +62,13 @@ struct Authentication : AuthenticationService {
     
 }
 
-
-
 extension Authentication.User : Equatable {
-    
     static func == (lhs: Authentication.User, rhs: Authentication.User) -> Bool {
         if lhs.email == rhs.email {
             return lhs.password == rhs.password
         }
         return false
     }
-    
 }
 
 
