@@ -17,10 +17,10 @@ struct RootView: View {
                     Label("Hotels", systemImage: "square.split.1x2")
                 }
             
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.circle")
-                }
+//            ProfileView()
+//                .tabItem {
+//                    Label("Profile", systemImage: "person.circle")
+//                }
             
         }
         

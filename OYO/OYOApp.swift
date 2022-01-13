@@ -13,7 +13,7 @@ struct OYOApp: App {
     var body: some Scene {
         WindowGroup {
            ContentView()
-                .environmentObject(UserSettings())
+                .environmentObject(AuthenticationViewModel())
         }
     }
 }

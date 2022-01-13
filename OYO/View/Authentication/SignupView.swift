@@ -14,7 +14,7 @@ struct SignupView: View {
     @State private var name : String = ""
     @State private var phone : String = ""
     
-    @EnvironmentObject var settings : UserSettings
+    @EnvironmentObject var viewModel : AuthenticationViewModel
     
     var body: some View {
         VStack(alignment : .leading) {
@@ -33,9 +33,7 @@ struct SignupView: View {
                 .keyboardType(.numberPad)
             
             CustomSecureField(text: $password)
-            
-//            toggle
-            
+                        
             Spacer()
             
             footer
@@ -47,13 +45,6 @@ struct SignupView: View {
         
     }
     
-//    var toggle : some View {
-//        Toggle(isOn: Storage.$isOwner) {
-//            Text("Are you owner of a hotel?")
-//        }
-//        .padding(.vertical)
-//        .toggleStyle(.switch)
-//    }
     
     var header : some View {
         VStack(alignment : .leading) {
@@ -72,8 +63,8 @@ struct SignupView: View {
     }
     
     func storeUserDefault() {
-        let credientails = Credientials(name: name, phone: phone, email: email, password: password)
-        settings.performSignUp(for: credientails)
+        let user = Authentication.User(name: name, phone: phone, email: email, password: password)
+        viewModel.doSignUp(with: user)
     }
 }
 

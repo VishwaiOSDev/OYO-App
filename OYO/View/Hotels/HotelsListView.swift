@@ -10,7 +10,7 @@ import SwiftUI
 struct HotelsListView: View {
     
     @StateObject var viewModel : HotelsViewModel = HotelsViewModel()
-    @EnvironmentObject var settings : UserSettings
+    @EnvironmentObject var authenticationViewModel : AuthenticationViewModel
     
     var body: some View {
         NavigationView {
@@ -59,10 +59,22 @@ struct HotelsListView: View {
                     }
                 }
                 .navigationBarTitle("Hotels")
+                .toolbar {
+                    ToolbarItem {
+                        Button("Log out") {
+                            authenticationViewModel.doLogout()
+                        }
+                        
+                    }
+                }
             } else {
                 ProgressView("Please wait...")
             }
+            
+            
+               
         }
+        
     }
 }
 

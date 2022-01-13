@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var settings : UserSettings
+    @EnvironmentObject var settings : AuthenticationViewModel
     
     var body: some View {
         
@@ -25,7 +25,7 @@ struct ContentView: View {
 
 struct OwnerView : View {
     
-    @EnvironmentObject var settings : UserSettings
+    @EnvironmentObject var settings : AuthenticationViewModel
     
     var body : some View {
         VStack{

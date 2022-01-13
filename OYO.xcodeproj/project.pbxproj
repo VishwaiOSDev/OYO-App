@@ -11,7 +11,7 @@
 		881DDEFD2770B9D700B24AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFC2770B9D700B24AD8 /* Assets.xcassets */; };
 		881DDF002770B9D700B24AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */; };
 		883EFF06278ECB4200227C08 /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EFF05278ECB4200227C08 /* SignOutButton.swift */; };
-		8858B97C278AD7E9007F5020 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97B278AD7E8007F5020 /* UserSettings.swift */; };
+		8858B97C278AD7E9007F5020 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */; };
 		8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97D278AE0D5007F5020 /* OwnersView.swift */; };
 		8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A12770F6A000BC45A4 /* HotelsListView.swift */; };
 		8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A42770F7CA00BC45A4 /* HotelData.swift */; };
@@ -19,6 +19,7 @@
 		887C26E0278D734F002ADD1F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26DF278D734F002ADD1F /* RootView.swift */; };
 		887C26E4278D74A2002ADD1F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E3278D74A2002ADD1F /* ProfileView.swift */; };
 		887C26E7278D76EC002ADD1F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E6278D76EC002ADD1F /* Storage.swift */; };
+		8882220027902DD40041F256 /* DecodeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888221FF27902DD40041F256 /* DecodeUserDefaults.swift */; };
 		8892039327880ED60084EEE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892039227880ED60084EEE7 /* ContentView.swift */; };
 		88920395278849130084EEE7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920394278849120084EEE7 /* LoginView.swift */; };
 		88920398278853B80084EEE7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920397278853B80084EEE7 /* SignupView.swift */; };
@@ -27,7 +28,7 @@
 		88A4F5F9278BF167007BDFC2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5F8278BF166007BDFC2 /* CustomTextField.swift */; };
 		88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */; };
 		88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */; };
-		88BED035278B16420004668B /* Credientials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BED034278B16420004668B /* Credientials.swift */; };
+		88BED035278B16420004668B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BED034278B16420004668B /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,7 @@
 		881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		883EFF05278ECB4200227C08 /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		884435E92772FB6600AE188E /* OYO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OYO.entitlements; sourceTree = "<group>"; };
-		8858B97B278AD7E8007F5020 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		8858B97D278AE0D5007F5020 /* OwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersView.swift; sourceTree = "<group>"; };
 		8861C2A12770F6A000BC45A4 /* HotelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsListView.swift; sourceTree = "<group>"; };
 		8861C2A42770F7CA00BC45A4 /* HotelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelData.swift; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		887C26DF278D734F002ADD1F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		887C26E3278D74A2002ADD1F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		887C26E6278D76EC002ADD1F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		888221FF27902DD40041F256 /* DecodeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeUserDefaults.swift; sourceTree = "<group>"; };
 		8892039227880ED60084EEE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88920394278849120084EEE7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88920397278853B80084EEE7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		88A4F5F8278BF166007BDFC2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
-		88BED034278B16420004668B /* Credientials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credientials.swift; sourceTree = "<group>"; };
+		88BED034278B16420004668B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8861C2A42770F7CA00BC45A4 /* HotelData.swift */,
-				88BED034278B16420004668B /* Credientials.swift */,
+				88BED034278B16420004668B /* Authentication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */,
-				8858B97B278AD7E8007F5020 /* UserSettings.swift */,
+				8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				887C26E6278D76EC002ADD1F /* Storage.swift */,
+				888221FF27902DD40041F256 /* DecodeUserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -255,15 +258,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8898CA3F2771C13500EA2374 /* FeaturesCard.swift in Sources */,
-				8858B97C278AD7E9007F5020 /* UserSettings.swift in Sources */,
+				8858B97C278AD7E9007F5020 /* AuthenticationViewModel.swift in Sources */,
 				8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */,
 				8892039327880ED60084EEE7 /* ContentView.swift in Sources */,
 				88920395278849130084EEE7 /* LoginView.swift in Sources */,
 				887C26E7278D76EC002ADD1F /* Storage.swift in Sources */,
-				88BED035278B16420004668B /* Credientials.swift in Sources */,
+				88BED035278B16420004668B /* Authentication.swift in Sources */,
 				88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */,
 				8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */,
 				883EFF06278ECB4200227C08 /* SignOutButton.swift in Sources */,
+				8882220027902DD40041F256 /* DecodeUserDefaults.swift in Sources */,
 				88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */,
 				887C26E4278D74A2002ADD1F /* ProfileView.swift in Sources */,
 				88920398278853B80084EEE7 /* SignupView.swift in Sources */,
