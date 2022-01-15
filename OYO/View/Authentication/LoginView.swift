@@ -12,7 +12,7 @@ struct LoginView: View {
     @State private var email : String = ""
     @State private var password : String = ""
     
-    @EnvironmentObject var settings : AuthenticationViewModel
+    @EnvironmentObject var viewModel : AuthenticationViewModel
     
     var body: some View {
         
@@ -77,14 +77,8 @@ struct LoginView: View {
     }
     
     func loginPressed() {
-        
-//        settings.performLogin(for: User(email : email, password: password))
-        
-        
-//        let validation = settings.loginValidation(for: Credientials(email: email, password: password))
-//        if validation {
-//            settings.isLoggedIn = true
-//        }
+        let user = Authentication.User(email: email, password: password)
+        viewModel.doLogin(for: user)
     }
     
 }

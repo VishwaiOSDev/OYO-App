@@ -28,11 +28,18 @@ final class AuthenticationViewModel : ObservableObject {
         }
     }
     
+    func doLogin(for user : Authentication.User) {
+        let isLoggedIn = model.performLogin(for: user)
+        if isLoggedIn {
+            self.isLoggedIn = true
+        }
+    }
+    
     func doLogout() {
         let didLogout = model.performLogout()
         if didLogout {
                 self.isLoggedIn = false
         }
     }
-    
+        
 }

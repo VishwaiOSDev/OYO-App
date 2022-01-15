@@ -14,7 +14,7 @@ protocol AuthenticationService {
 
 struct Authentication : AuthenticationService {
     
-    @DecodeUserDefaults private(set) var users : [User]
+    @CodableUserDefaults private(set) var users : [User]
     
     struct User : Codable {
         var name : String = ""
@@ -23,13 +23,22 @@ struct Authentication : AuthenticationService {
         var password : String = ""
     }
     
+    func performLogin(for user : User) -> Bool {
+        for savedUser in users {
+            if savedUser == user {
+                Storage.loggedEmail = user.email
+                return true
+            }
+        }
+        return false
+    }
+    
     mutating func performSignUp(for user : User) -> Bool {
         let emailExists = checkAccountExists(for: users, with: user)
         if emailExists {
             print("This Email ID already Exists.")
             return false
         }
-        print("This is the users list \(users)")
         users.append(user)
         Storage.loggedEmail = user.email
         return true
@@ -45,7 +54,7 @@ struct Authentication : AuthenticationService {
             data.email == cred.email
         }
     }
-    
+
 }
 
 extension Authentication.User : Equatable {

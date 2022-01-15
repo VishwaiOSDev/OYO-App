@@ -8,31 +8,37 @@
 import Foundation
 
 @propertyWrapper
-struct DecodeUserDefaults {
-
-    private var users = [Authentication.User]()
-
+struct CodableUserDefaults {
+    
+    private var users : [Authentication.User] = [Authentication.User]()
+    
     var wrappedValue : [Authentication.User] {
         get {
             return users
         }
         set {
-            print("This is New Value", newValue)
-            storeDataOnStorage()
+            if let user = newValue.last {
+                users.append(user)
+                encodeToUserDefaults()
+            }
         }
     }
     
     init() {
-       
         if let usersDetails = decodeFromUserDefaults() {
             users = usersDetails
         } else {
             users = []
         }
-       
     }
     
-    func storeDataOnStorage() {
+}
+
+//MARK: - Codable Function
+
+extension CodableUserDefaults {
+    
+    func encodeToUserDefaults() {
         var data : Data?
         let encoder = JSONEncoder()
         do {
@@ -43,13 +49,12 @@ struct DecodeUserDefaults {
         }
         UserDefaults.standard.set(data, forKey: "users")
     }
-
+    
     func decodeFromUserDefaults() -> [Authentication.User]? {
         let decoder = JSONDecoder()
         do {
             if let storedData = UserDefaults.standard.data(forKey: "users") {
                 let safeData = try decoder.decode([Authentication.User].self, from: storedData)
-                print("This is Safe Data", safeData)
                 return safeData
             }
         }
@@ -58,5 +63,5 @@ struct DecodeUserDefaults {
         }
         return nil
     }
-
+    
 }

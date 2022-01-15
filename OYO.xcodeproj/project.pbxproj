@@ -19,7 +19,7 @@
 		887C26E0278D734F002ADD1F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26DF278D734F002ADD1F /* RootView.swift */; };
 		887C26E4278D74A2002ADD1F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E3278D74A2002ADD1F /* ProfileView.swift */; };
 		887C26E7278D76EC002ADD1F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E6278D76EC002ADD1F /* Storage.swift */; };
-		8882220027902DD40041F256 /* DecodeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888221FF27902DD40041F256 /* DecodeUserDefaults.swift */; };
+		8882220027902DD40041F256 /* CodableUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888221FF27902DD40041F256 /* CodableUserDefaults.swift */; };
 		8892039327880ED60084EEE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892039227880ED60084EEE7 /* ContentView.swift */; };
 		88920395278849130084EEE7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920394278849120084EEE7 /* LoginView.swift */; };
 		88920398278853B80084EEE7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88920397278853B80084EEE7 /* SignupView.swift */; };
@@ -46,7 +46,7 @@
 		887C26DF278D734F002ADD1F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		887C26E3278D74A2002ADD1F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		887C26E6278D76EC002ADD1F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		888221FF27902DD40041F256 /* DecodeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeUserDefaults.swift; sourceTree = "<group>"; };
+		888221FF27902DD40041F256 /* CodableUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUserDefaults.swift; sourceTree = "<group>"; };
 		8892039227880ED60084EEE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88920394278849120084EEE7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88920397278853B80084EEE7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				887C26E6278D76EC002ADD1F /* Storage.swift */,
-				888221FF27902DD40041F256 /* DecodeUserDefaults.swift */,
+				888221FF27902DD40041F256 /* CodableUserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */,
 				8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */,
 				883EFF06278ECB4200227C08 /* SignOutButton.swift in Sources */,
-				8882220027902DD40041F256 /* DecodeUserDefaults.swift in Sources */,
+				8882220027902DD40041F256 /* CodableUserDefaults.swift in Sources */,
 				88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */,
 				887C26E4278D74A2002ADD1F /* ProfileView.swift in Sources */,
 				88920398278853B80084EEE7 /* SignupView.swift in Sources */,
