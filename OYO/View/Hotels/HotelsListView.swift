@@ -59,22 +59,10 @@ struct HotelsListView: View {
                     }
                 }
                 .navigationBarTitle("Hotels")
-                .toolbar {
-                    ToolbarItem {
-                        Button("Log out") {
-                            authenticationViewModel.doLogout()
-                        }
-                        
-                    }
-                }
             } else {
                 ProgressView("Please wait...")
             }
-            
-            
-               
         }
-        
     }
 }
 

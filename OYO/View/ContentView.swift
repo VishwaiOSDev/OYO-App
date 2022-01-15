@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var settings : AuthenticationViewModel
+    @EnvironmentObject var viewModel : AuthenticationViewModel
     
     var body: some View {
         
@@ -25,14 +25,14 @@ struct ContentView: View {
 
 struct OwnerView : View {
     
-    @EnvironmentObject var settings : AuthenticationViewModel
+    @EnvironmentObject var viewModel : AuthenticationViewModel
     
     var body : some View {
         VStack{
             Text("Owner")
                 .font(.largeTitle)
             Button("Log out") {
-                settings.isLoggedIn = false
+                viewModel.isLoggedIn = false
             }
         }
     }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class ProfileViewModel : ObservableObject {
-        
+    
     @Published private(set) var loggedInUser = Authentication.User()
-
+    
     @CodableUserDefaults private(set) var users : [Authentication.User]
     
     func getProfileDetails() {

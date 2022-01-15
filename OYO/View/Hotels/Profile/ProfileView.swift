@@ -8,61 +8,61 @@
 import SwiftUI
 
 struct ProfileView: View {
-
+    
     @EnvironmentObject var viewModel : ProfileViewModel
     @EnvironmentObject var authenticationViewModel : AuthenticationViewModel
     
     var body: some View {
-
+        
         VStack(alignment: .leading) {
-
+            
             header
-
+            
             mainCard
-
+            
             phoneCard
-
+            
             Spacer()
-
+            
             SignOutButton(action: signOutPressed, label: "Sign Out")
-
+            
         }
         .padding()
         .onAppear {
             viewModel.getProfileDetails()
         }
     }
-
-
+    
+    
     var header : some View {
         Text("Profile")
             .font(.largeTitle)
             .bold()
     }
-
+    
     var mainCard : some View {
         ZStack {
             cardDetails
         }
     }
-
+    
     var cardDetails : some View {
         VStack {
-
+            
             circleAvatar
-
+            
             nameIcon
-
+            
             Text(viewModel.loggedInUser.email)
                 .tint(.gray)
-
+            
         }
         .frame(maxWidth : .infinity)
         .padding()
         .background(Color("FieldBackground"))
         .cornerRadius(12)
     }
-
+    
     var circleAvatar : some View {
         Text(viewModel.loggedInUser.name.prefix(1))
             .font(.largeTitle)
@@ -70,7 +70,7 @@ struct ProfileView: View {
             .background(.gray)
             .clipShape(Circle())
     }
-
+    
     var nameIcon : some View {
         HStack {
             Text(viewModel.loggedInUser.name)
@@ -80,13 +80,13 @@ struct ProfileView: View {
                 .font(.title3)
         }
     }
-
+    
     var phoneCard : some View {
         HStack(spacing : 4) {
             VStack(alignment : .center) {
                 Text("Phone")
                     .font(.caption)
-
+                
                 Text(viewModel.loggedInUser.phone)
             }
         }
@@ -95,9 +95,7 @@ struct ProfileView: View {
         .background(Color("FieldBackground"))
         .cornerRadius(12)
     }
-
-    //MARK: - Sign Out Logic is done here
-
+        
     func signOutPressed() {
         authenticationViewModel.doLogout()
     }
