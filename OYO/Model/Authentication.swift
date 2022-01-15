@@ -14,7 +14,7 @@ protocol AuthenticationService {
 
 struct Authentication : AuthenticationService {
     
-    private(set) var users = [User]()
+    @DecodeUserDefaults private(set) var users : [User]
     
     struct User : Codable {
         var name : String = ""
@@ -24,34 +24,20 @@ struct Authentication : AuthenticationService {
     }
     
     mutating func performSignUp(for user : User) -> Bool {
-        @DecodeUserDefaults var oldData : [Authentication.User]
-        let emailExists = checkAccountExists(for: oldData, with: user)
+        let emailExists = checkAccountExists(for: users, with: user)
         if emailExists {
             print("This Email ID already Exists.")
             return false
         }
-        users = oldData
+        print("This is the users list \(users)")
         users.append(user)
-        storeDataOnStorage(for: user.email)
+        Storage.loggedEmail = user.email
         return true
     }
     
     func performLogout() -> Bool {
         Storage.loggedEmail = ""
         return true
-    }
-    
-    func storeDataOnStorage(for email : String) {
-        var data : Data?
-        let encoder = JSONEncoder()
-        do {
-            data = try encoder.encode(users)
-        }
-        catch {
-            print(error.localizedDescription)
-        }
-        UserDefaults.standard.set(data, forKey: "users")
-        Storage.loggedEmail = email
     }
     
     func checkAccountExists(for details : [User], with cred : User) -> Bool {

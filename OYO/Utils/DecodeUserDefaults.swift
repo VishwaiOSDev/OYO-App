@@ -16,6 +16,10 @@ struct DecodeUserDefaults {
         get {
             return users
         }
+        set {
+            print("This is New Value", newValue)
+            storeDataOnStorage()
+        }
     }
     
     init() {
@@ -27,13 +31,25 @@ struct DecodeUserDefaults {
         }
        
     }
+    
+    func storeDataOnStorage() {
+        var data : Data?
+        let encoder = JSONEncoder()
+        do {
+            data = try encoder.encode(users)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        UserDefaults.standard.set(data, forKey: "users")
+    }
 
     func decodeFromUserDefaults() -> [Authentication.User]? {
         let decoder = JSONDecoder()
-        
         do {
             if let storedData = UserDefaults.standard.data(forKey: "users") {
                 let safeData = try decoder.decode([Authentication.User].self, from: storedData)
+                print("This is Safe Data", safeData)
                 return safeData
             }
         }
