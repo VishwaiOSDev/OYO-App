@@ -7,12 +7,13 @@
 
 import Foundation
 
-protocol AuthenticationService {
+protocol AuthenticationServices {
+    func performLogin(for user : Authentication.User) -> Bool
     mutating func performSignUp(for user : Authentication.User) -> Bool
     func performLogout() -> Bool
 }
 
-struct Authentication : AuthenticationService {
+struct Authentication : AuthenticationServices {
     
     @CodableUserDefaults private(set) var users : [User]
     

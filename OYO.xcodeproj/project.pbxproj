@@ -29,6 +29,7 @@
 		88A4F5FB278BF1A6007BDFC2 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */; };
 		88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */; };
 		88BED035278B16420004668B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BED034278B16420004668B /* Authentication.swift */; };
+		88E79ABD27931B3F00421E30 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79ABC27931B3F00421E30 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		88A4F5FA278BF1A6007BDFC2 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		88A4F5FC278BF1EC007BDFC2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		88BED034278B16420004668B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		88E79ABC27931B3F00421E30 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */,
 				8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */,
+				88E79ABC27931B3F00421E30 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				8892039327880ED60084EEE7 /* ContentView.swift in Sources */,
 				88920395278849130084EEE7 /* LoginView.swift in Sources */,
 				887C26E7278D76EC002ADD1F /* Storage.swift in Sources */,
+				88E79ABD27931B3F00421E30 /* ProfileViewModel.swift in Sources */,
 				88BED035278B16420004668B /* Authentication.swift in Sources */,
 				88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */,
 				8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */,
