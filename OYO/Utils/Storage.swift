@@ -11,5 +11,6 @@ struct Storage {
     
     @AppStorage("loggedIn") static var loggedIn = false
     @AppStorage("email") static var loggedEmail = ""
-            
+    @AppStorage("owner") static var owner = false
+    
 }

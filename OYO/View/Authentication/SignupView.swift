@@ -13,31 +13,24 @@ struct SignupView: View {
     @State private var password : String = ""
     @State private var name : String = ""
     @State private var phone : String = ""
+    @State private var isOwner : Bool = false
     
     @EnvironmentObject var viewModel : AuthenticationViewModel
     
     var body: some View {
         VStack(alignment : .leading) {
-            
             header
-            
             Spacer()
-            
             CustomTextField(text: $email, placeholder: "Email")
                 .keyboardType(.emailAddress)
-            
             CustomTextField(text: $name, placeholder: "Name")
                 .disableAutocorrection(true)
-            
             CustomTextField(text: $phone, placeholder: "Phone")
                 .keyboardType(.numberPad)
-            
             CustomSecureField(text: $password)
-                        
+            ownerToggle
             Spacer()
-            
             footer
-            
         }
         .padding()
         .disableAutocorrection(true)
@@ -45,25 +38,28 @@ struct SignupView: View {
         
     }
     
-    
     var header : some View {
         VStack(alignment : .leading) {
             Text("Let's sign up.")
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .padding(.vertical, 2)
-          
+            
+        }
+    }
+    
+    var ownerToggle : some View {
+        Toggle(isOn: $isOwner) {
+            Text("Are you owner of a hotel?")
         }
     }
     
     var footer : some View {
-        
         PrimaryButton(action: storeUserDefault, label: "Sign Up")
-    
     }
     
     func storeUserDefault() {
-        let user = Authentication.User(name: name, phone: phone, email: email, password: password)
+        let user = Authentication.User(name: name, phone: phone, email: email, password: password, isOwner: isOwner)
         viewModel.doSignUp(with: user)
     }
 }

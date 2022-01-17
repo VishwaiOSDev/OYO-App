@@ -14,29 +14,18 @@ struct ContentView: View {
     var body: some View {
         
         if Storage.loggedIn {
-            RootView()
+            if Storage.owner {
+                OwnerView()
+                    .environmentObject(OwnerViewModel())
+            } else {
+                RootView()
+                    .environmentObject(UserViewModel())
+            }
         } else {
             LoginView()
         }
         
     }
-}
-
-
-struct OwnerView : View {
-    
-    @EnvironmentObject var viewModel : AuthenticationViewModel
-    
-    var body : some View {
-        VStack{
-            Text("Owner")
-                .font(.largeTitle)
-            Button("Log out") {
-                viewModel.isLoggedIn = false
-            }
-        }
-    }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

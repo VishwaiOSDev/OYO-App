@@ -22,6 +22,7 @@ struct Authentication : AuthenticationServices {
         var phone : String = ""
         var email : String = ""
         var password : String = ""
+        var isOwner : Bool = false
     }
     
     func performLogin(for user : User) -> Bool {
@@ -55,7 +56,16 @@ struct Authentication : AuthenticationServices {
             data.email == cred.email
         }
     }
-
+    
+    func checkUserOrOwner(for details : User) -> Bool {
+        users.contains { data in
+            if data.email == details.email {
+                return data.isOwner
+            }
+            return false
+        }
+    }
+    
 }
 
 extension Authentication.User : Equatable {

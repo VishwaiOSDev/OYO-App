@@ -11,7 +11,9 @@ final class ProfileViewModel : ObservableObject {
     
     @Published private(set) var loggedInUser = Authentication.User()
     
-    @CodableUserDefaults private(set) var users : [Authentication.User]
+    @CodableUserDefaults private var users : [Authentication.User]
+    
+    private var model = Authentication()
     
     func getProfileDetails() {
         for user in users {

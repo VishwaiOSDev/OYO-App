@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881A86202795432D0041BA1B /* OwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A861F2795432D0041BA1B /* OwnerView.swift */; };
+		881A86222795482F0041BA1B /* CodableHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A86212795482F0041BA1B /* CodableHotels.swift */; };
+		881A8624279562FA0041BA1B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A8623279562FA0041BA1B /* UserViewModel.swift */; };
 		881DDEF92770B9D500B24AD8 /* OYOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DDEF82770B9D500B24AD8 /* OYOApp.swift */; };
 		881DDEFD2770B9D700B24AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFC2770B9D700B24AD8 /* Assets.xcassets */; };
 		881DDF002770B9D700B24AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881DDEFF2770B9D700B24AD8 /* Preview Assets.xcassets */; };
@@ -14,8 +17,8 @@
 		8858B97C278AD7E9007F5020 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */; };
 		8858B97E278AE0D5007F5020 /* OwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8858B97D278AE0D5007F5020 /* OwnersView.swift */; };
 		8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A12770F6A000BC45A4 /* HotelsListView.swift */; };
-		8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A42770F7CA00BC45A4 /* HotelData.swift */; };
-		8861C2A82770F81200BC45A4 /* HotelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */; };
+		8861C2A52770F7CA00BC45A4 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A42770F7CA00BC45A4 /* Owner.swift */; };
+		8861C2A82770F81200BC45A4 /* OwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861C2A72770F81200BC45A4 /* OwnerViewModel.swift */; };
 		887C26E0278D734F002ADD1F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26DF278D734F002ADD1F /* RootView.swift */; };
 		887C26E4278D74A2002ADD1F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E3278D74A2002ADD1F /* ProfileView.swift */; };
 		887C26E7278D76EC002ADD1F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C26E6278D76EC002ADD1F /* Storage.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881A861F2795432D0041BA1B /* OwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerView.swift; sourceTree = "<group>"; };
+		881A86212795482F0041BA1B /* CodableHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHotels.swift; sourceTree = "<group>"; };
+		881A8623279562FA0041BA1B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		881DDEF52770B9D400B24AD8 /* Bookz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881DDEF82770B9D500B24AD8 /* OYOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OYOApp.swift; sourceTree = "<group>"; };
 		881DDEFC2770B9D700B24AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,8 +48,8 @@
 		8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		8858B97D278AE0D5007F5020 /* OwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersView.swift; sourceTree = "<group>"; };
 		8861C2A12770F6A000BC45A4 /* HotelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsListView.swift; sourceTree = "<group>"; };
-		8861C2A42770F7CA00BC45A4 /* HotelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelData.swift; sourceTree = "<group>"; };
-		8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsViewModel.swift; sourceTree = "<group>"; };
+		8861C2A42770F7CA00BC45A4 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		8861C2A72770F81200BC45A4 /* OwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewModel.swift; sourceTree = "<group>"; };
 		887C26DF278D734F002ADD1F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		887C26E3278D74A2002ADD1F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		887C26E6278D76EC002ADD1F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -71,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		881A861E279543160041BA1B /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				881A861F2795432D0041BA1B /* OwnerView.swift */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
 		881DDEEC2770B9D400B24AD8 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +128,7 @@
 		8861C2A32770F7B700BC45A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8861C2A42770F7CA00BC45A4 /* HotelData.swift */,
+				8861C2A42770F7CA00BC45A4 /* Owner.swift */,
 				88BED034278B16420004668B /* Authentication.swift */,
 			);
 			path = Model;
@@ -123,9 +137,10 @@
 		8861C2A62770F7FB00BC45A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8861C2A72770F81200BC45A4 /* HotelsViewModel.swift */,
+				8861C2A72770F81200BC45A4 /* OwnerViewModel.swift */,
 				8858B97B278AD7E8007F5020 /* AuthenticationViewModel.swift */,
 				88E79ABC27931B3F00421E30 /* ProfileViewModel.swift */,
+				881A8623279562FA0041BA1B /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 		8861C2A92770FA5F00BC45A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				881A861E279543160041BA1B /* Owner */,
 				889203962788539A0084EEE7 /* Authentication */,
 				887C26E1278D7481002ADD1F /* Hotels */,
 				8892039227880ED60084EEE7 /* ContentView.swift */,
@@ -164,6 +180,7 @@
 			children = (
 				887C26E6278D76EC002ADD1F /* Storage.swift */,
 				888221FF27902DD40041F256 /* CodableUserDefaults.swift */,
+				881A86212795482F0041BA1B /* CodableHotels.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,11 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8898CA3F2771C13500EA2374 /* FeaturesCard.swift in Sources */,
+				881A8624279562FA0041BA1B /* UserViewModel.swift in Sources */,
 				8858B97C278AD7E9007F5020 /* AuthenticationViewModel.swift in Sources */,
-				8861C2A52770F7CA00BC45A4 /* HotelData.swift in Sources */,
+				8861C2A52770F7CA00BC45A4 /* Owner.swift in Sources */,
 				8892039327880ED60084EEE7 /* ContentView.swift in Sources */,
 				88920395278849130084EEE7 /* LoginView.swift in Sources */,
 				887C26E7278D76EC002ADD1F /* Storage.swift in Sources */,
+				881A86222795482F0041BA1B /* CodableHotels.swift in Sources */,
+				881A86202795432D0041BA1B /* OwnerView.swift in Sources */,
 				88E79ABD27931B3F00421E30 /* ProfileViewModel.swift in Sources */,
 				88BED035278B16420004668B /* Authentication.swift in Sources */,
 				88A4F5FD278BF1EC007BDFC2 /* PrimaryButton.swift in Sources */,
@@ -279,7 +299,7 @@
 				8861C2A22770F6A000BC45A4 /* HotelsListView.swift in Sources */,
 				8898CA3C2771A7BA00EA2374 /* HotelDetailsView.swift in Sources */,
 				887C26E0278D734F002ADD1F /* RootView.swift in Sources */,
-				8861C2A82770F81200BC45A4 /* HotelsViewModel.swift in Sources */,
+				8861C2A82770F81200BC45A4 /* OwnerViewModel.swift in Sources */,
 				88A4F5F9278BF167007BDFC2 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

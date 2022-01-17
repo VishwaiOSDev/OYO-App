@@ -13,18 +13,16 @@ struct PrimaryButton : View {
     var label : String
     
     var body : some View {
-
         Button(action : action) {
             Text(label)
                 .font(.title3)
                 .bold()
                 .foregroundColor(Color("B&W"))
-                .frame(maxWidth : .infinity, maxHeight: 50)
         }
+        .frame(maxWidth : .infinity, maxHeight: 50)
         .padding(8)
         .background(.primary)
         .cornerRadius(20)
-
     }
-    
 }
+
