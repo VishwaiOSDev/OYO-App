@@ -31,10 +31,14 @@ struct Owner {
 }
 
 extension Owner.Hotel {
-    init(hotelName : String, hotelDescription : String, hotelPrice : String) {
+    init(hotelName : String = "", hotelDescription : String = "", hotelPrice : String = "") {
         self.hotelName = hotelName
         self.hotelDescription = hotelDescription
         self.hotelPrice = hotelPrice
-        owner = Storage.loggedEmail
+        if Storage.owner {
+            owner = Storage.loggedEmail
+        } else {
+            owner = ""
+        }
     }
 }

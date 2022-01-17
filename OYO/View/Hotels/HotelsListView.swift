@@ -14,20 +14,24 @@ struct HotelsListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.hotels) { hotel in
-                VStack(alignment : .leading) {
-                    Text(hotel.hotelName)
-                        .font(.title)
-                        .bold()
-                    Text("₹\(hotel.hotelPrice)/ day")
-                        .font(.title2)
-                    Text(hotel.hotelDescription)
-                        .font(.subheadline)
-                        .lineLimit(1)
+                NavigationLink(destination: HotelDetailsView(hotel : hotel)) {
+                    VStack(alignment : .leading) {
+                        Text(hotel.hotelName)
+                            .font(.title)
+                            .bold()
+                        Text("₹\(hotel.hotelPrice)/ day")
+                            .font(.title2)
+                        Text(hotel.hotelDescription)
+                            .font(.subheadline)
+                            .lineLimit(1)
+                    }
                 }
             }
             .onAppear {
                 viewModel.getListOfHotels()
-            }.navigationTitle("Hotels")
+            }
+            .navigationViewStyle(.stack)
+            .navigationTitle("Hotels")
         }
     }
 

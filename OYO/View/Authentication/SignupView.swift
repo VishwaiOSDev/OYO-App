@@ -44,7 +44,6 @@ struct SignupView: View {
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .padding(.vertical, 2)
-            
         }
     }
     
