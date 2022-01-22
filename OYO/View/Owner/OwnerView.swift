@@ -34,7 +34,6 @@ struct OwnerView: View {
                             .lineLimit(5)
                             .multilineTextAlignment(.leading)
                     }
-                    
                     Section {
                         TextField("Price", text : $hotelPrice)
                     }
@@ -44,6 +43,7 @@ struct OwnerView: View {
                 
                 PrimaryButton(action: postButtonPressed, label: "Post")
                     .padding()
+                
             }
             .navigationTitle("Owner")
             .navigationViewStyle(.stack)
@@ -56,7 +56,7 @@ struct OwnerView: View {
     }
     
     func postButtonPressed() {
-        let hotel = Owner.Hotel(hotelName: hotelName, hotelDescription: hotelDescription, hotelPrice: hotelPrice)
+        let hotel = User.Hotel(hotelName: hotelName, hotelDescription: hotelDescription, hotelPrice: hotelPrice)
         let isHotelPosted = viewModel.doPostNewHotel(with: hotel)
         if isHotelPosted {
             resetFields()

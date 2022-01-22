@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class UserViewModel : ObservableObject {
+final class HotelViewModel : ObservableObject {
     
-    @Published var hotels = [Owner.Hotel]()
+    @Published var hotels = [User.Hotel]()
     
-    private var model = Owner()
+    private var model = User()
     
     func getListOfHotels() {
         hotels = model.getAllHotels()

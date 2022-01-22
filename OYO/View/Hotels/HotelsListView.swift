@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HotelsListView: View {
     
-    @EnvironmentObject var viewModel : UserViewModel
+    @EnvironmentObject var viewModel : HotelViewModel
     
     var body: some View {
         NavigationView {

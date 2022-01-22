@@ -19,18 +19,31 @@ struct SignupView: View {
     
     var body: some View {
         VStack(alignment : .leading) {
-            header
-            Spacer()
-            CustomTextField(text: $email, placeholder: "Email")
-                .keyboardType(.emailAddress)
-            CustomTextField(text: $name, placeholder: "Name")
-                .disableAutocorrection(true)
-            CustomTextField(text: $phone, placeholder: "Phone")
-                .keyboardType(.numberPad)
-            CustomSecureField(text: $password)
-            ownerToggle
-            Spacer()
-            footer
+            Group {
+                header
+                Spacer()
+                CustomTextField(text: $email, placeholder: "Email")
+                    .keyboardType(.emailAddress)
+                Text("\(viewModel.emailError)")
+                    .font(.subheadline)
+                    .foregroundColor(.red)
+                CustomTextField(text: $name, placeholder: "Name")
+                    .disableAutocorrection(true)
+                Text("\(viewModel.nameError)")
+                    .font(.subheadline)
+                    .foregroundColor(.red)
+            }
+            Group {
+                CustomTextField(text: $phone, placeholder: "Phone")
+                    .keyboardType(.numberPad)
+                Text("\(viewModel.phoneError)")
+                    .font(.subheadline)
+                    .foregroundColor(.red)
+                CustomSecureField(text: $password)
+                ownerToggle
+                Spacer()
+                footer                
+            }
         }
         .padding()
         .disableAutocorrection(true)

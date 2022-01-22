@@ -18,19 +18,12 @@ struct LoginView: View {
         
         NavigationView {
             VStack(alignment : .leading) {
-                
                 header
-                
                 Spacer()
-                
                 CustomTextField(text: $email, placeholder: "Phone, email or username")
-                
                 CustomSecureField(text: $password)
-                
                 Spacer()
-                
                 footer
-                
             }
             .padding()
             .navigationBarTitleDisplayMode(.inline)
@@ -41,28 +34,21 @@ struct LoginView: View {
     
     var footer : some View {
         VStack {
-            
             HStack {
-                
                 Text("Don't have an account?")
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.66))
-                
                 NavigationLink(destination: SignupView()) {
                     Text("Register")
                         .fontWeight(.semibold)
                 }
                 .foregroundColor(.primary)
-                
             }
             .padding()
-            
             PrimaryButton(action: loginPressed, label: "Login")
-            
         }
     }
     
     var header : some View {
-        
         VStack(alignment : .leading) {
             Text("Let's sign you in.")
                 .font(.largeTitle)
@@ -72,8 +58,6 @@ struct LoginView: View {
                 .font(.title)
                 .fontWeight(.regular)
         }
-        
-        
     }
     
     func loginPressed() {

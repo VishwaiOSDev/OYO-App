@@ -23,6 +23,7 @@ struct Authentication : AuthenticationServices {
         var email : String = ""
         var password : String = ""
         var isOwner : Bool = false
+        var bookedDetails : [Booking.Book] = [Booking.Book]()
     }
     
     func performLogin(for user : User) -> Bool {

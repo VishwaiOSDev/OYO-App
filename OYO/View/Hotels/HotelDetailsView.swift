@@ -9,11 +9,14 @@ import SwiftUI
 
 struct HotelDetailsView: View {
     
-    var hotel : Owner.Hotel = Owner.Hotel()
+    @State private var bookSheetPresented = false
+    
+    var hotel : User.Hotel = User.Hotel()
     
     var body: some View {
-        VStack {
+        VStack(alignment : .leading) {
             scrollView
+                .padding(.horizontal, 8)
             Spacer()
             bookButton
         }
@@ -39,11 +42,14 @@ struct HotelDetailsView: View {
     
     var bookButton : some View {
         PrimaryButton(action: bookButtonPressed, label: "Book Now")
+            .sheet(isPresented: $bookSheetPresented, content: {
+                BookHotelView(hotelCost: hotel.hotelPrice, hotelName: hotel.hotelName)
+            })
             .padding()
     }
     
     func bookButtonPressed() {
-        print("Book Now button is Pressed.")
+        bookSheetPresented.toggle()
     }
     
 }

@@ -9,9 +9,9 @@ import Foundation
 
 class OwnerViewModel : ObservableObject {
         
-    private var model = Owner()
+    private var model = User()
     
-    func doPostNewHotel(with detail : Owner.Hotel) -> Bool {
+    func doPostNewHotel(with detail : User.Hotel) -> Bool {
         let status = model.postNewHotel(for: detail)
         return status
     }

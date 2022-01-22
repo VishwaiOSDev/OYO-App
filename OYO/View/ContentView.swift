@@ -15,11 +15,11 @@ struct ContentView: View {
         
         if Storage.loggedIn {
             if Storage.owner {
-                OwnerView()
+                OwnerRootView()
                     .environmentObject(OwnerViewModel())
             } else {
-                RootView()
-                    .environmentObject(UserViewModel())
+                UserRootView()
+                    .environmentObject(HotelViewModel())
             }
         } else {
             LoginView()

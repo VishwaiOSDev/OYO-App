@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Owner {
+struct User {
     
     @CodableHotels private(set) var hotels : [Hotel]
     
@@ -16,21 +16,21 @@ struct Owner {
         var hotelName : String
         var hotelDescription : String
         var hotelPrice : String
-        var owner : String
+        var owner : String?
     }
-    
+        
     mutating func postNewHotel(for details : Hotel) -> Bool {
         hotels.append(details)
         return true
     }
     
-    func getAllHotels() -> [Owner.Hotel] {
+    func getAllHotels() -> [User.Hotel] {
         return hotels
     }
     
 }
 
-extension Owner.Hotel {
+extension User.Hotel {
     init(hotelName : String = "", hotelDescription : String = "", hotelPrice : String = "") {
         self.hotelName = hotelName
         self.hotelDescription = hotelDescription
@@ -38,7 +38,7 @@ extension Owner.Hotel {
         if Storage.owner {
             owner = Storage.loggedEmail
         } else {
-            owner = ""
+            owner = nil
         }
     }
 }

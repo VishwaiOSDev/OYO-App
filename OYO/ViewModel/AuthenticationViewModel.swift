@@ -19,6 +19,9 @@ final class AuthenticationViewModel : ObservableObject {
             Storage.owner = isOwner
         }
     }
+    @Published var emailError : String = ""
+    @Published var phoneError : String = ""
+    @Published var nameError : String = ""
     
     private var model = Authentication()
     
@@ -28,10 +31,30 @@ final class AuthenticationViewModel : ObservableObject {
     }
     
     func doSignUp(with details : Authentication.User) {
-        let isSignedUp = model.performSignUp(for: details)
-        let userStatus = model.checkUserOrOwner(for: details)
-        self.isOwner = userStatus
-        self.isLoggedIn = isSignedUp
+        do {
+            try validateField(for: details)
+            let isSignedUp = model.performSignUp(for: details)
+            let userStatus = model.checkUserOrOwner(for: details)
+            self.isOwner = userStatus
+            self.isLoggedIn = isSignedUp
+        }
+        catch (let error as SignUpError) {
+            switch error {
+            case .tooShort:
+                emailError = error.localizedDescription
+            case .tooLong:
+                emailError = error.localizedDescription
+            case .notValidEmail:
+                emailError = error.localizedDescription
+            case .invalidCharacter(_):
+                nameError = error.localizedDescription
+            case .noValidPhone:
+                phoneError = error.localizedDescription
+            }
+        }
+        catch {
+            print(error.localizedDescription)
+        }
     }
     
     func doLogin(for user : Authentication.User) {
@@ -48,3 +71,26 @@ final class AuthenticationViewModel : ObservableObject {
     }
     
 }
+
+extension AuthenticationViewModel {
+    func validateField(for user : Authentication.User) throws {
+        guard user.email.count > 3 else {
+            throw SignUpError.tooShort
+        }
+        guard user.email.count < 15 else {
+            throw SignUpError.tooLong
+        }
+        guard user.email.contains("@") else {
+            throw SignUpError.notValidEmail
+        }
+        guard user.phone.count == 10 else {
+            throw SignUpError.noValidPhone
+        }
+        for character in user.name {
+            guard character.isLetter else {
+                throw SignUpError.invalidCharacter(character)
+            }
+        }
+    }
+}
+

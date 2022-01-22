@@ -10,9 +10,9 @@ import Foundation
 @propertyWrapper
 struct CodableHotels {
     
-    private var hotels : [Owner.Hotel] = [Owner.Hotel]()
+    private var hotels : [User.Hotel] = [User.Hotel]()
     
-    var wrappedValue : [Owner.Hotel] {
+    var wrappedValue : [User.Hotel] {
         get {
             return hotels
         }
@@ -49,11 +49,11 @@ extension CodableHotels {
         UserDefaults.standard.set(data, forKey: "hotels")
     }
     
-    func decodeHotels() -> [Owner.Hotel]? {
+    func decodeHotels() -> [User.Hotel]? {
         let decoder = JSONDecoder()
         do {
             if let storedData = UserDefaults.standard.data(forKey: "hotels") {
-                let safeData = try decoder.decode([Owner.Hotel].self, from: storedData)
+                let safeData = try decoder.decode([User.Hotel].self, from: storedData)
                 return safeData
             }
         }

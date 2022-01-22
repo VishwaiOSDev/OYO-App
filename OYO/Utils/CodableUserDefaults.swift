@@ -18,7 +18,7 @@ struct CodableUserDefaults {
         }
         set {
             if let user = newValue.last {
-                users.append(user)
+                findIndexAndUpdate(for : user)
                 encodeToUserDefaults()
             }
         }
@@ -34,9 +34,19 @@ struct CodableUserDefaults {
     
 }
 
+
+
 //MARK: - Codable Function
 
 extension CodableUserDefaults {
+    
+    mutating func findIndexAndUpdate(for user : Authentication.User) {
+        if let index = users.firstIndex(where : { $0.email == user.email }) {
+            users[index] = user
+        } else {
+            users.append(user)
+        }
+    }
     
     func encodeToUserDefaults() {
         var data : Data?
