@@ -7,12 +7,19 @@
 
 import Foundation
 
+protocol Bookable {
+    var id: UUID { get set }
+    var hotelName: String { get set }
+    var user: String { get set }
+    var totalCost: Int { get set }
+}
+
 struct Booking  {
     
     @CodableUserDefaults private var users : [Authentication.User]
     @CodableHotels private var hotels : [User.Hotel]
     
-    struct Book : Codable, Identifiable {
+    struct Book : Codable, Identifiable, Bookable {
         var id = UUID()
         var hotelName : String = ""
         var user : String = ""
