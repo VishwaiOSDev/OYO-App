@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// This is not an effective SwiftUI Application
+
 struct UserRootView: View {
     
     var body: some View {
